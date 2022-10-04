@@ -1,0 +1,128 @@
+.btn_bg {
+    background-color: #20a8d8 !important;
+  }
+  
+  .btn_tcolor {
+    color: white;
+  }
+  
+  .btn_ {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form_control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .input_group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .input_group > .form_control {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+  }
+  
+  .input_group > .form_control + .form_control {
+    margin-left: -1px;
+  }
+  
+  .input_group > .form_control:focus {
+    z-index: 3;
+  }
+  
+  .input_group > .form_control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .input_group > .form_control:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .input_group-prepend,
+  .input_group-append {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .input_group-prepend .btn_,
+  .input_group-append .btn_ {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .input_group-prepend .btn_ + .btn_,
+  .input_group-prepend .btn_ + .input_group-text,
+  .input_group-prepend .input_group-text + .input_group-text,
+  .input_group-prepend .input_group-text + .btn_,
+  .input_group-append .btn_ + .btn_,
+  .input_group-append .btn_ + .input_group-text,
+  .input_group-append .input_group-text + .input_group-text,
+  .input_group-append .input_group-text + .btn_ {
+    margin-left: -1px;
+  }
+  
+  .input_group-prepend {
+    margin-right: -1px;
+  }
+  
+  .input_group-append {
+    margin-left: -1px;
+  }
+  
+  .input_group > .input_group-prepend > .btn_,
+  .input_group > .input_group-prepend > .input_group-text,
+  .input_group > .input_group-append:not(:last-child) > .btn_,
+  .input_group > .input_group-append:not(:last-child) > .input_group-text,
+  .input_group > .input_group-append:last-child > .btn_:not(:last-child):not(.dropdown-toggle),
+  .input_group > .input_group-append:last-child > .input_group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .input_group > .input_group-append > .btn_,
+  .input_group > .input_group-append > .input_group-text,
+  .input_group > .input_group-prepend:not(:first-child) > .btn_,
+  .input_group > .input_group-prepend:not(:first-child) > .input_group-text,
+  .input_group > .input_group-prepend:first-child > .btn_:not(:first-child),
+  .input_group > .input_group-prepend:first-child > .input_group-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }

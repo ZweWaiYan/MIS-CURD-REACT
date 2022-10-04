@@ -1,0 +1,12 @@
+//key props in error ကိုရှင်းရန် (featurelist.js / pagefeature.js line 125 / see in log)
+//user က sub route radio Btn ကိုနှိပ်လိုက်ရင် auto "/" Text ကို URL input မှာပေါ်စေချင် (NewFeature.js)
+//currentPage 2 က data အကုန်လုံးဖျက်လိုက်လို့ ဘာမှမကျန်တောရင် currentPage 1 ကို auto သွားစေရန် (FeatureList/RoleList to NewFeature/NewRole)
+
+//大事なやる事
+//Feature List Page က Main Route ကို select လုပ်လိုက်ရင် ‌ရွှေးလိုက်တဲ့ main ROute နဲ့ သူနဲ့ဆိုင်တဲ့ sub route ကိုပဲပြရန် (FeatureList.js)
+
+//how done?
+//Sub Route table 1 ကိုဖျက်လိုက်ရင် သူနဲ့ဆက်ဆိုင်ရာ link Route table 2 တွေအကုန်ပျက်အောင်လုပ်ရန် (FeatureList.js)
+//Solve
+//Just set foreign key to reference table 1 from table 2
+//on Update and on Delete must be CASCADE for update to delete

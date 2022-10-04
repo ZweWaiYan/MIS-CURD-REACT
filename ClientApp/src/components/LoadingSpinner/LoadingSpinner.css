@@ -1,0 +1,92 @@
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    position: absolute;
+  } */
+}
+
+@media all {
+  .loading {
+    position: absolute;
+  }
+}
+
+.snapToParent {
+  position: absolute !important;
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapToParent::before {
+  position: absolute !important;
+}
+
+.loadingNoFix {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.loading:before,
+.loadingNoFix:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading:not(:required),
+.loadingNoFix:not(:required) {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after,
+.loadingNoFix:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 15px; /* 10px */
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  animation: spinner 4.0s infinite linear; /* animation: spinner 2.0s infinite linear; */
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}
+
+@-webkit-keyframes spinner {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}
